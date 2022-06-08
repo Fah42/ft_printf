@@ -6,7 +6,7 @@
 #    By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/16 16:12:57 by fhadhri           #+#    #+#              #
-#    Updated: 2022/06/08 11:03:08 by fhadhri          ###   ########.fr        #
+#    Updated: 2022/06/08 18:43:01 by fhadhri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ WHITE = \033[0;97m
 
 #Sources
 
-SRC_FILES	=	ft_printf ft_printf_utils ft_printchar ft_printint ft_printu ft_printpercent ft_printhex ft_printstr ft_printaddr
+SRC_FILES	=	ft_printf ft_printchar ft_printint ft_printu ft_printpercent ft_printhex ft_printstr ft_printaddr
 
 
 SRC 		= 	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
