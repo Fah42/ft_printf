@@ -6,7 +6,7 @@
 #    By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/16 16:12:57 by fhadhri           #+#    #+#              #
-#    Updated: 2022/06/08 18:43:01 by fhadhri          ###   ########.fr        #
+#    Updated: 2022/06/14 12:10:39 by fhadhri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ LIBFT		= libft
 SRC_DIR		= src/
 OBJ_DIR		= obj/
 CC			= gcc
-CFLAGS		= -Wall -Wextra -I
+CFLAGS		= -Wall -Wextra -Werror -I
 RM			= rm -f
 AR			= ar rcs
 
