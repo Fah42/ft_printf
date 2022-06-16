@@ -6,11 +6,11 @@
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 14:07:39 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/06/08 18:26:58 by fhadhri          ###   ########.fr       */
+/*   Updated: 2022/06/15 14:54:53 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftprintf.h"
+#include "ft_printf.h"
 #include "libft.h"
 
 int	ft_printint(int n)

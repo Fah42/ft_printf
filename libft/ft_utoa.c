@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_utoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/15 10:42:39 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/05/18 14:58:12 by fhadhri          ###   ########.fr       */
+/*   Created: 2022/06/15 18:17:21 by fhadhri           #+#    #+#             */
+/*   Updated: 2022/06/15 18:47:21 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_intlen(long nb)
+int	ft_intlent(long nb)
 {
 	int		i;
 
@@ -22,11 +22,6 @@ int	ft_intlen(long nb)
 		i++;
 		return (i);
 	}
-	if (nb < 0)
-	{
-		nb = nb * -1;
-		i++;
-	}
 	while (nb > 0)
 	{
 		nb = nb / 10;
@@ -35,25 +30,20 @@ int	ft_intlen(long nb)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char	*ft_utoa(unsigned long n)
 {
 	char	*dest;
 	int		i;
 	long	nn;
 
 	nn = n;
-	i = ft_intlen(nn);
+	i = ft_intlent(nn);
 	dest = (char *)malloc(sizeof(char) * (i + 1));
 	if (!(dest))
 		return (NULL);
 	dest[i--] = '\0';
 	if (nn == 0)
 		dest[0] = 48;
-	if (nn < 0)
-	{
-		dest[0] = '-';
-		nn = nn * -1;
-	}
 	while (nn > 0)
 	{
 		dest[i] = 48 + (nn % 10);

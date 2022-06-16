@@ -6,12 +6,12 @@
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 09:25:01 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/06/08 15:58:17 by fhadhri          ###   ########.fr       */
+/*   Updated: 2022/06/15 14:55:01 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printstr(char *str)
 {

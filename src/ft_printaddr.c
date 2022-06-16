@@ -6,11 +6,11 @@
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:02:28 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/06/08 18:33:22 by fhadhri          ###   ########.fr       */
+/*   Updated: 2022/06/15 17:46:01 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 #include "libft.h"
 
 int	ft_addr_lenght(unsigned long long n)
@@ -42,13 +42,19 @@ void	ft_put_addr(unsigned long long n)
 	}
 }
 
-int	ft_printaddr(unsigned long n)
+int	ft_printaddr(unsigned long long n)
 {
 	int	addr_lenght;
 
 	addr_lenght = 0;
-	addr_lenght += write(1, "0x", 2);
-	ft_put_addr(n);
-	addr_lenght += ft_addr_lenght(n);
+	if (n > 0)
+	{
+		addr_lenght += write(1, "0x", 2);
+		ft_put_addr(n);
+		addr_lenght += ft_addr_lenght(n);
+		return (addr_lenght);
+	}
+	else
+		addr_lenght += write(1, "(nil)", 5);
 	return (addr_lenght);
 }

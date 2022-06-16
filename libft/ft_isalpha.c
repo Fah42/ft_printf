@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/16 11:59:41 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/05/16 14:46:51 by fhadhri          ###   ########.fr       */
+/*   Created: 2022/05/02 11:18:28 by fhadhri           #+#    #+#             */
+/*   Updated: 2022/05/21 11:01:11 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_isalpha(char c)
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(-n, fd);
-	}
-	else if (n >= 10)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + '0', fd);
-	}
+	if (((c >= 65 && c <= 90) || (c >= 97 && c <= 122)))
+		return (1);
 	else
-		ft_putchar_fd(n + 48, fd);
+		return (0);
 }
-
 /*
-int	main(void)
+int main(void)
 {
-	int	n, fd;
-	n = -2147483648;
-	fd = 1;
-	ft_putnbr_fd(n, fd);
+	char	c = '1';
+
+	printf("%i" ,ft_isalpha(c));
 	return (0);
-}*/
+}
+*/

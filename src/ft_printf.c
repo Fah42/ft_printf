@@ -6,11 +6,11 @@
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 10:07:47 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/06/08 18:16:43 by fhadhri          ###   ########.fr       */
+/*   Updated: 2022/06/16 10:11:07 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftprintf.h"
+#include "ft_printf.h"
 #include <stdlib.h>
 
 int	ft_formats(va_list args, char c)
@@ -23,13 +23,13 @@ int	ft_formats(va_list args, char c)
 	if (c == 's')
 		print_ret += ft_printstr(va_arg(args, char *));
 	if (c == 'p')
-		print_ret += ft_printaddr(va_arg(args, unsigned long));
+		print_ret += ft_printaddr(va_arg(args, unsigned long long));
 	if (c == 'd' || c == 'i')
 		print_ret += ft_printint(va_arg(args, int));
 	if (c == 'u')
 		print_ret += ft_printu(va_arg(args, unsigned int));
 	if (c == 'x' || c == 'X')
-		print_ret += ft_printhex(va_arg(args, unsigned long long), c);
+		print_ret += ft_printhex(va_arg(args, int), c);
 	if (c == '%')
 		print_ret += ft_printpercent();
 	return (print_ret);
@@ -41,6 +41,7 @@ int	ft_printf(const char *str, ...)
 	int		i;
 	int		print_ret;
 
+	i = 0;
 	print_ret = 0;
 	va_start(args, str);
 	while (str[i] != '\0')
@@ -58,11 +59,14 @@ int	ft_printf(const char *str, ...)
 	return (print_ret);
 }
 
-int	main(void)
-{
-	int a = 50;
-
-//	printf("%p \n", ptra);
-	ft_printf("%d \n", a);
+ int	main(void)
+ {
+ //	int i = -2147483648;
+ //	int j = 2147483647;
+	int c = 456456;	
+printf("%u\n", c);
+	ft_printf("%u\n", c);
+//	printf("%s\n", jc;
+//	ft_printf("%d\n", j);
 	return (0);
 }

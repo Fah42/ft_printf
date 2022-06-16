@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ftprintf.h                                         :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 10:03:12 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/06/08 11:06:13 by fhadhri          ###   ########.fr       */
+/*   Updated: 2022/06/15 19:08:59 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FTPRINTF_H
-# define FTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdlib.h>
 # include <stdio.h>
@@ -24,9 +24,9 @@ void	ft_putchar(char c);
 int		ft_formats(va_list args, char c);
 int		ft_printchar(int c);
 int		ft_printint(int n);
-int		ft_printu(int n);
+int		ft_printu(unsigned int n);
 int		ft_printpercent(void);
-int		ft_printhex(unsigned long n, char c);
+int		ft_printhex(unsigned int n, char c);
 int		ft_printstr(char *str);
 int		ft_printaddr(unsigned long long n);
 #endif

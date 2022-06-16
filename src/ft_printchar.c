@@ -6,11 +6,11 @@
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 13:44:24 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/06/02 14:04:59 by fhadhri          ###   ########.fr       */
+/*   Updated: 2022/06/15 14:54:43 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printchar(int c)
 {
