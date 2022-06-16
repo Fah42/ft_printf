@@ -6,7 +6,7 @@
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 10:07:47 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/06/16 12:14:05 by fhadhri          ###   ########.fr       */
+/*   Updated: 2022/06/16 12:24:39 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,4 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end(args);
 	return (print_ret);
-}
-
-int	main(void)
-{
-	ft_printf("salut");
 }
