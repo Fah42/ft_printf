@@ -6,12 +6,11 @@
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 17:07:17 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/06/15 19:08:43 by fhadhri          ###   ########.fr       */
+/*   Updated: 2022/06/16 12:14:20 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 int	ft_hex_lenght(unsigned int n)
 {

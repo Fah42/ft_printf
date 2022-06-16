@@ -6,52 +6,33 @@
 #    By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/16 16:12:57 by fhadhri           #+#    #+#              #
-#    Updated: 2022/06/16 10:13:51 by fhadhri          ###   ########.fr        #
+#    Updated: 2022/06/16 12:21:46 by fhadhri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= libftprintf.a
-LIBFT		= libft
-INCLUDE		= include
-SRC_DIR		= src/
-OBJ_DIR		= obj/
-CC			= gcc
-CFLAGS		= -Wall -Wextra -Werror -I
-RM			= rm -f
-AR			= ar rcs
 
-#Sources
+SRCS			= ft_printf.c ft_printchar.c ft_printint.c ft_printu.c ft_printpercent.c ft_printhex.c ft_printstr.c ft_printaddr.c ft_tools.c
+OBJS			= $(SRCS:.c=.o)
 
-SRC_FILES	=	ft_printf ft_printchar ft_printint ft_printu ft_printpercent ft_printhex ft_printstr ft_printaddr
+CC				= gcc
+RM				= rm -f
+CFLAGS			= -Wall -Wextra -Werror -I.
 
+NAME			= libftprintf.a
 
-SRC 		= 	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
-OBJ 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
+all:			$(NAME)
 
-OBJF		=	.cache_exists
-
-all:		$(NAME)
-
-$(NAME):	$(OBJ)
-			make -C $(LIBFT)
-			cp libft/libft.a .
-			mv libft.a $(NAME)
-			$(AR) $(NAME) $(OBJ)
-
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
-			$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
-
-$(OBJF):
-			mkdir -p $(OBJ_DIR)
+$(NAME):		$(OBJS)
+				ar rcs $(NAME) $(OBJS)
 
 clean:
-			$(RM) -rf $(OBJ_DIR)
-			make clean -C $(LIBFT)
+				$(RM) $(OBJS)
 
-fclean:		clean
-			$(RM) -f $(NAME)
-			$(RM) -f $(LIBFT)/libft.a
+fclean:			clean
+				$(RM) $(NAME)
 
-re:			fclean all
+re:				fclean
+				make all
 
-.PHONY:		all clean fclean re
+
+.PHONY:			all clean fclean re

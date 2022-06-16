@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_printstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 22:26:30 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/05/12 14:26:20 by fhadhri          ###   ########.fr       */
+/*   Created: 2022/06/07 09:25:01 by fhadhri           #+#    #+#             */
+/*   Updated: 2022/06/16 12:17:35 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_printstr(char *str)
 {
-	const unsigned char	*ss;
-	size_t				i;
+	int	strlenght;
 
-	i = 0;
-	ss = s;
-	while (i < n)
+	if (str == NULL)
 	{
-		if (ss[i] == (unsigned char)c)
-		{
-			return ((void *)&ss[i]);
-		}
-		i++;
+		write(1, "(null)", 6);
+		return (6);
 	}
-	return (0);
+	else
+	{
+		strlenght = ft_strlen(str);
+		write(1, str, strlenght);
+		return (strlenght);
+	}
 }

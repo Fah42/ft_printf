@@ -6,12 +6,11 @@
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 10:07:47 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/06/16 10:11:07 by fhadhri          ###   ########.fr       */
+/*   Updated: 2022/06/16 12:14:05 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdlib.h>
 
 int	ft_formats(va_list args, char c)
 {
@@ -59,14 +58,7 @@ int	ft_printf(const char *str, ...)
 	return (print_ret);
 }
 
- int	main(void)
- {
- //	int i = -2147483648;
- //	int j = 2147483647;
-	int c = 456456;	
-printf("%u\n", c);
-	ft_printf("%u\n", c);
-//	printf("%s\n", jc;
-//	ft_printf("%d\n", j);
-	return (0);
+int	main(void)
+{
+	ft_printf("salut");
 }

@@ -6,7 +6,7 @@
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 10:03:12 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/06/15 19:08:59 by fhadhri          ###   ########.fr       */
+/*   Updated: 2022/06/16 12:21:32 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,11 @@ int		ft_printpercent(void);
 int		ft_printhex(unsigned int n, char c);
 int		ft_printstr(char *str);
 int		ft_printaddr(unsigned long long n);
+void	ft_putchar_fd(char c, int fd);
+int		ft_intlen(long nb);
+char	*ft_itoa(int n);
+int		ft_intlent(long nb);
+char	*ft_utoa(unsigned long n);
+size_t	ft_strlen(const char *s);
+
 #endif

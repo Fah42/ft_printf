@@ -6,12 +6,11 @@
 /*   By: fhadhri <fhadhri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:02:28 by fhadhri           #+#    #+#             */
-/*   Updated: 2022/06/15 17:46:01 by fhadhri          ###   ########.fr       */
+/*   Updated: 2022/06/16 12:11:56 by fhadhri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 int	ft_addr_lenght(unsigned long long n)
 {
